@@ -1,0 +1,36 @@
+@import './arise-fx.css';
+@import './arise2.css';
+@import './arise3.css';
+@import './arise4.css';
+/* ARISE · ambientación tipo Solo Leveling con tu paleta rose-gold */
+:root { --sys-bg: rgba(16, 18, 23, .9); --sys-line: rgba(245, 200, 158, .45); --sys-txt: #cfc8bf; --font-sys: 'Chakra Petch', 'Inter', sans-serif; }
+body::before { content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 0;
+  background: radial-gradient(60% 40% at 50% -5%, rgba(245,200,158,.14), transparent 70%), radial-gradient(40% 30% at 100% 100%, rgba(232,112,64,.08), transparent 70%),
+  repeating-linear-gradient(0deg, rgba(255,255,255,.015) 0 1px, transparent 1px 3px); }
+.app { z-index: 1; }
+.title, .brand, .section, .player-title, .hero-txt h1 { font-family: var(--font-sys); text-transform: uppercase; letter-spacing: .03em; }
+.tabbar { padding: 7px 4px; } .tab { padding: 8px 7px; }
+
+.sys { position: relative; padding: 16px 16px 18px; border-radius: 6px; color: #f3efe9; font-family: var(--font-sys);
+  background: linear-gradient(180deg, rgba(245,200,158,.07), transparent 40%), var(--sys-bg); border: 1px solid var(--sys-line);
+  box-shadow: 0 0 24px var(--rose-glow), inset 0 0 22px rgba(245,200,158,.08); animation: sysIn .45s cubic-bezier(.2,.9,.2,1); }
+.sys::before { content: ''; position: absolute; left: 14px; right: 14px; top: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--gold-1), transparent); box-shadow: 0 0 10px var(--gold-1); }
+.sys-c { position: absolute; width: 14px; height: 14px; border: 2px solid var(--gold-1); filter: drop-shadow(0 0 4px var(--gold-1)); }
+.sys-c.tl { top: -3px; left: -3px; border-right: 0; border-bottom: 0; } .sys-c.tr { top: -3px; right: -3px; border-left: 0; border-bottom: 0; }
+.sys-c.bl { bottom: -3px; left: -3px; border-right: 0; border-top: 0; } .sys-c.br { bottom: -3px; right: -3px; border-left: 0; border-top: 0; }
+.sys-head { display: flex; align-items: center; justify-content: center; gap: 10px; padding-bottom: 10px; margin-bottom: 12px; border-bottom: 1px solid rgba(245,200,158,.2); }
+.sys-head b { font-size: 14px; letter-spacing: .26em; color: var(--gold-1); text-shadow: 0 0 10px var(--rose-glow); }
+.sys-ico, .sys-toast b { flex: none; width: 22px; height: 22px; display: grid; place-items: center; border: 1.5px solid var(--gold-1); border-radius: 4px; font-weight: 700; font-size: 13px; color: var(--gold-1); box-shadow: 0 0 8px var(--rose-glow); }
+.sys.danger { border-color: rgba(232,112,64,.6); box-shadow: 0 0 24px rgba(232,112,64,.35), inset 0 0 22px rgba(232,112,64,.1); }
+.sys.danger .sys-head b, .sys.danger .sys-ico { color: var(--fire); border-color: var(--fire); } .sys.danger .sys-c { border-color: var(--fire); }
+@keyframes sysIn { from { opacity: 0; transform: scaleY(.5); filter: brightness(2.2); } }
+.sys-txt { font-size: 13px; color: var(--sys-txt); line-height: 1.5; margin: 6px 0; } .sys-txt b { color: var(--gold-1); }
+.sys-big { font-size: 22px; font-weight: 700; text-align: center; letter-spacing: .06em; color: #fff; text-shadow: 0 0 14px var(--rose-glow); margin: 10px 0; } .sys-big.sm { font-size: 17px; }
+.sys-btn { display: block; width: 100%; margin-top: 12px; padding: 12px; text-align: center; font-family: var(--font-sys); font-weight: 700; letter-spacing: .18em; font-size: 13px;
+  color: var(--gold-1); border: 1px solid var(--gold-1); border-radius: 4px; background: rgba(245,200,158,.08); box-shadow: 0 0 14px var(--rose-glow); transition: all .2s; }
+.sys-btn:active { background: var(--gold-1); color: #1f150e; } .sys-btn:disabled { opacity: .45; box-shadow: none; }
+.sys-btn.ghost { color: var(--sys-txt); border-color: rgba(255,255,255,.18); box-shadow: none; background: none; }
+.sys-bar { height: 8px; border-radius: 2px; background: rgba(255,255,255,.07); overflow: hidden; border: 1px solid rgba(245,200,158,.2); }
+.sys-bar i { display: block; height: 100%; background: linear-gradient(90deg, var(--gold-2), var(--gold-1)); box-shadow: 0 0 10px var(--gold-1); transition: width .6s; }
+.sys-toast { position: fixed; top: 18px; left: 50%; transform: translateX(-50%); z-index: 9999; width: calc(100% - 32px); max-width: 420px; display: flex; gap: 10px; align-items: center; padding: 12px 14px;
+  font-family: var(--font-sys); font-weight: 600; font-size: 13px; color: #f3efe9; background: var(--sys-bg); border: 1px solid var(--gold-1); border-radius: 4px; box-shadow: 0 0 20px var(--rose-glow); animation: sysIn .35s; }

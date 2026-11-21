@@ -1,0 +1,17 @@
+/* ARISE · Gym */
+.g-ex h3 { font-size: 16px; font-family: var(--font-sys); text-transform: uppercase; letter-spacing: .04em; }
+.g-head, .g-set { display: grid; grid-template-columns: 34px 1fr 1fr 44px; gap: 8px; align-items: center; margin-top: 8px; }
+.g-ex.bw .g-head, .g-ex.bw .g-set { grid-template-columns: 34px 1fr 44px; }
+.g-head span { font-size: 10px; letter-spacing: .14em; color: var(--muted); font-weight: 800; text-align: center; } .g-n { text-align: center; font-weight: 900; color: var(--accent); }
+.g-set .input { padding: 10px; text-align: center; } .g-set.done .input { border-color: var(--rose-border); color: var(--gold-1); }
+.g-chk { height: 40px; border-radius: 12px; text-align: center; font-weight: 900; color: var(--muted); border: 1px solid rgba(255,255,255,.1); }
+.g-chk.on { color: #1f150e; background: linear-gradient(135deg, var(--gold-1), var(--gold-2)); box-shadow: 0 0 12px var(--rose-glow); }
+.g-ex > .btn-ghost { margin-top: 12px; width: 100%; }
+.g-rank { width: 30px; height: 30px; display: grid; place-items: center; border-radius: 6px; font-family: var(--font-sys); font-weight: 700; color: #1f150e; background: var(--rc, #3a3f49); }
+.g-x { width: 30px; height: 30px; text-align: center; color: var(--muted); font-size: 20px; }
+.g-sel { margin-top: 10px; } .g-sel option, .g-sel optgroup { background: var(--bg-deep); color: var(--text); } .g-hist p { margin: 6px 0 8px; }
+.g-rest { position: fixed; left: 50%; transform: translateX(-50%); bottom: 96px; z-index: 20; width: calc(100% - 28px); max-width: 452px; display: flex; align-items: center; gap: 8px; padding: 10px 12px;
+  color: #f3efe9; font-family: var(--font-sys); background: var(--sys-bg); border: 1px solid var(--gold-1); border-radius: 6px; box-shadow: 0 0 22px var(--rose-glow); }
+.g-rest span { font-size: 11px; letter-spacing: .18em; color: var(--gold-1); } .g-rest b { font-size: 24px; margin-right: auto; }
+.g-rest button { padding: 7px 10px; font-size: 12px; font-weight: 700; color: var(--gold-1); border: 1px solid rgba(245,200,158,.35); border-radius: 4px; }
+.page:has(.g-rest) { padding-bottom: 96px; }

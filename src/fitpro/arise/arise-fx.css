@@ -1,0 +1,13 @@
+/* ARISE · ventanas emergentes: subir de nivel y ARISE */
+.sys-overlay { position: fixed; inset: 0; z-index: 9998; display: grid; place-items: center; padding: 24px; background: rgba(8,9,12,.8); backdrop-filter: blur(6px); animation: fade .3s; }
+.sys-overlay .sys { width: 100%; max-width: 360px; }
+.sys-lv { text-align: center; font-size: 42px; font-weight: 700; } .sys-lv span { color: var(--muted); } .sys-lv b { color: var(--gold-1); text-shadow: 0 0 18px var(--gold-1); }
+.arise-overlay { position: fixed; inset: 0; z-index: 9998; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; padding: 24px; text-align: center; overflow: hidden;
+  color: #f3efe9; font-family: var(--font-sys); background: radial-gradient(circle at 50% 55%, rgba(245,200,158,.2), transparent 60%), #07080b; animation: fade .4s; }
+.arise-smoke { position: absolute; inset: -30%; background: radial-gradient(circle at 30% 70%, rgba(0,0,0,.8), transparent 40%), radial-gradient(circle at 70% 80%, rgba(0,0,0,.7), transparent 40%), conic-gradient(from 0deg, transparent, rgba(245,200,158,.07), transparent 30%); animation: spin 12s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.arise-word { position: relative; font-size: 76px; font-weight: 700; letter-spacing: .14em; color: transparent; background: linear-gradient(180deg, #fff6ec, var(--gold-1) 50%, var(--gold-2)); -webkit-background-clip: text; background-clip: text; filter: drop-shadow(0 0 24px var(--gold-1)); animation: ariseIn 1.2s cubic-bezier(.2,.9,.2,1); }
+@keyframes ariseIn { 0% { transform: scale(2.4); opacity: 0; filter: blur(12px); } 60% { opacity: 1; } }
+.arise-icon { position: relative; font-size: 64px; filter: grayscale(1) brightness(.4) drop-shadow(0 0 18px var(--gold-1)); animation: rise 1.4s .4s both; }
+@keyframes rise { from { transform: translateY(60px) scale(.6); opacity: 0; } }
+.arise-overlay h2 { position: relative; font-size: 28px; letter-spacing: .2em; text-transform: uppercase; } .arise-overlay .sys-txt, .arise-overlay .sys-btn { position: relative; max-width: 300px; }

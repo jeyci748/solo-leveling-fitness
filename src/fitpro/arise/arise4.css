@@ -1,0 +1,15 @@
+/* ARISE · Rango y mapa corporal */
+.sy-nums { flex: 1; display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; text-align: center; } .sy-nums b { display: block; font-size: 22px; color: var(--gold-1); } .sy-nums small { font-size: 9px; letter-spacing: .1em; color: var(--sys-txt); }
+.bodymap { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 12px; } .bodymap figure { margin: 0; text-align: center; }
+.bodymap svg { width: 100%; max-height: 300px; } .bodymap figcaption { font-size: 10px; letter-spacing: .2em; color: var(--sys-txt); }
+.bm-base { fill: #2b3038; stroke: rgba(245,200,158,.12); stroke-width: .8; } .bm { stroke: rgba(10,12,16,.85); stroke-width: 1; transition: fill .4s; } .bm.off { fill: #363c46; }
+.bm.r-E { fill: #5d6470; } .bm.r-D { fill: #8a93a3; } .bm.r-C { fill: #c9865b; } .bm.r-B { fill: #f5c89e; filter: drop-shadow(0 0 3px rgba(245,200,158,.6)); }
+.bm.r-A { fill: #e87040; filter: drop-shadow(0 0 4px #e87040); } .bm.r-S { fill: #fff1e0; filter: drop-shadow(0 0 6px #f5c89e); }
+.sy-legend { display: flex; justify-content: center; gap: 12px; margin-top: 8px; font-size: 11px; color: var(--sys-txt); } .sy-legend span { display: flex; align-items: center; gap: 4px; }
+.sy-legend i { width: 10px; height: 10px; border-radius: 2px; background: var(--rc); }
+.sy-split { display: grid; gap: 10px; margin-top: 10px; } .sy-s { font-size: 11px; color: var(--sys-txt); }
+.sy-spbar { height: 8px; border-radius: 2px; background: var(--fire); margin-top: 4px; overflow: hidden; } .sy-spbar i { display: block; height: 100%; background: var(--gold-1); }
+.sy-m { cursor: pointer; } .sy-m .bar { margin-top: 10px; } .sy-m b { font-size: 15px; }
+.sy-det { margin-top: 12px; display: grid; gap: 6px; } .sy-ex { display: flex; justify-content: space-between; gap: 8px; font-size: 13px; padding: 8px 10px; border-radius: 12px; background: var(--bg-deep); }
+.sy-ex small { color: var(--accent); font-weight: 700; text-align: right; }
+.sy-pct { display: grid; grid-template-columns: repeat(6, 1fr); gap: 4px; text-align: center; } .sy-pct b { display: block; font-size: 14px; } .sy-pct small { font-size: 10px; color: var(--sys-txt); }

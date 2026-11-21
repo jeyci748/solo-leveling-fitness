@@ -1,0 +1,33 @@
+/* ARISE · rangos, estado, misiones, gym y mapa corporal */
+.r-E { --rc: #5d6470; } .r-D { --rc: #8a93a3; } .r-C { --rc: #c9865b; } .r-B { --rc: #f5c89e; } .r-A { --rc: #e87040; } .r-S { --rc: linear-gradient(135deg, #fff6ec, #f5c89e 50%, #e87040); }
+.hchip { display: flex; align-items: center; gap: 8px; padding: 5px 12px 5px 5px; border-radius: 99px; background: var(--sys-bg); border: 1px solid var(--sys-line); box-shadow: 0 0 14px var(--rose-glow); font-family: var(--font-sys); }
+.hchip b { width: 30px; height: 30px; display: grid; place-items: center; border-radius: 50%; font-size: 15px; color: #1f150e; background: var(--rc); }
+.hchip span { font-size: 12px; font-weight: 700; color: var(--gold-1); letter-spacing: .1em; }
+.st-top, .sy-top { display: flex; gap: 14px; align-items: center; }
+.st-rank { flex: none; width: 78px; height: 88px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #1f150e; background: var(--rc);
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); filter: drop-shadow(0 0 10px var(--rose-glow)); }
+.st-rank b { font-size: 40px; line-height: 1; font-weight: 700; } .st-rank small { font-size: 9px; letter-spacing: .2em; font-weight: 700; }
+.st-name { font-size: 20px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; }
+.st-sub { font-size: 12px; color: var(--sys-txt); letter-spacing: .06em; margin-top: 2px; } .st-sub b { color: var(--gold-1); }
+.st-xp { margin: 14px 0 6px; } .st-xp .row { margin-bottom: 5px; } .st-xp small { font-size: 11px; color: var(--sys-txt); letter-spacing: .12em; }
+.st-vitals { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 12px 0; }
+.st-vitals div { padding: 8px; border: 1px solid rgba(245,200,158,.18); border-radius: 4px; text-align: center; }
+.st-vitals small { display: block; font-size: 10px; letter-spacing: .16em; color: var(--sys-txt); } .st-vitals b { font-size: 17px; }
+.st-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 14px; }
+.st-stat { display: flex; align-items: center; gap: 8px; padding: 8px 0; border-bottom: 1px dashed rgba(245,200,158,.15); }
+.st-stat span { width: 36px; font-size: 13px; color: var(--sys-txt); letter-spacing: .1em; } .st-stat b { font-size: 20px; } .st-stat small { color: var(--gold-1); font-size: 12px; }
+.st-plus { margin-left: auto; width: 26px; height: 26px; text-align: center; font-weight: 700; color: var(--gold-1); border: 1px solid var(--gold-1); border-radius: 4px; animation: glow 1.4s infinite; }
+@keyframes glow { 50% { box-shadow: 0 0 12px var(--rose-glow); } }
+.sys-q { text-align: center; font-size: 13px; color: var(--gold-1); letter-spacing: .1em; margin-bottom: 8px; text-transform: uppercase; }
+.q-row { display: grid; grid-template-columns: 1fr auto auto; gap: 10px; align-items: center; padding: 9px 0; border-bottom: 1px solid rgba(255,255,255,.05); }
+.q-row span { font-size: 14px; } .q-row b { font-size: 13px; color: var(--sys-txt); }
+.q-row.ok span, .q-row.ok b { color: var(--gold-1); text-shadow: 0 0 8px var(--rose-glow); }
+.q-btns { display: flex; gap: 4px; } .q-btns button { min-width: 34px; padding: 5px 6px; text-align: center; font-size: 12px; font-weight: 700; color: var(--gold-1); border: 1px solid rgba(245,200,158,.35); border-radius: 4px; }
+.sys-warn { font-size: 11px; color: var(--fire); margin-top: 10px; } .sys-done { text-align: center; margin-top: 12px; color: var(--gold-1); font-weight: 700; letter-spacing: .12em; }
+.heat { display: grid; grid-template-columns: repeat(7, 1fr); gap: 5px; text-align: center; } .heat small { font-size: 10px; color: var(--sys-txt); }
+.heat i { aspect-ratio: 1; border-radius: 3px; background: rgba(255,255,255,.05); } .heat i.l1 { background: rgba(245,200,158,.4); }
+.heat i.l2 { background: var(--gold-1); box-shadow: 0 0 8px var(--rose-glow); } .heat i.now { outline: 1px solid var(--gold-1); } .heat i.fut { opacity: .25; }
+.shadows { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+.shadow { padding: 12px 8px; text-align: center; border: 1px solid rgba(255,255,255,.06); border-radius: 4px; opacity: .5; }
+.shadow span { display: block; font-size: 28px; filter: grayscale(1) brightness(.4); } .shadow b { display: block; font-size: 13px; letter-spacing: .1em; margin-top: 4px; } .shadow small { font-size: 10px; color: var(--sys-txt); }
+.shadow.on { opacity: 1; border-color: rgba(245,200,158,.4); box-shadow: inset 0 0 16px rgba(245,200,158,.12); } .shadow.on span { filter: grayscale(.6) brightness(.8) drop-shadow(0 0 10px var(--gold-1)); }
